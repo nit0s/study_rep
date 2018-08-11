@@ -16,7 +16,10 @@ public class House{
     return -1;}
 
     public static void addUser(String listUsers[] , String User ){
-      listUsers[getPostion(listUsers)]=User;
+      int validPos=getPostion(listUsers);
+      if ( validPos != -1)
+      listUsers[validPos]=User;
+      else{ System.out.println("there is not space for another user in the house");}
     }
 
     public static String getUsers( String usersList[]){
@@ -27,7 +30,6 @@ public class House{
         System.out.println("The name of house is : "+h.house);
         System.out.println("The name of  owner house is  :"+h.ownerHouse);
         System.out.println("The list of habitants is   :");
-        System.out.println(userslist[0]);
     }
 
 
