@@ -1,5 +1,6 @@
 public class House{
     private String house, ownerHouse;
+    private static int hSize;
     private static String users[];
 
     public House(String nameHouse , String owner){
@@ -24,7 +25,8 @@ public class House{
 
 
       public static void main(String []args){
-         users=new String [5];
+         hSize=5;
+         users=new String [hSize];
          House creature=new House("begin" , "carlos");
          //after construct add users
          addUser(users,"charli");
