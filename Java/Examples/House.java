@@ -22,14 +22,17 @@ public class House{
       else{ System.out.println("there is not space for another user in the house");}
     }
 
-    public static String getUsers( String usersList[]){
-        return usersList[0];
+    public static void getUsers( String usersList[]){
+        for (int x=0; x < usersList.length; x++){
+          System.out.println("habitant "+x+" "+usersList[x]);
+        }//for
     }
 
     public static void showHouse(House h ,String userslist[] ){
         System.out.println("The name of house is : "+h.house);
         System.out.println("The name of  owner house is  :"+h.ownerHouse);
         System.out.println("The list of habitants is   :");
+        getUsers(userslist);
     }
 
 
