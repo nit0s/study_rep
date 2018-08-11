@@ -9,8 +9,14 @@ public class House{
         System.out.println("The house is constructed");
     }
 
+    public static int getPostion(String list[]){
+      for (int x = 0; x < list.length; x++){
+        if ( list[x]==null )
+        return x;}//end for
+    return -1;}
+
     public static void addUser(String listUsers[] , String User ){
-        listUsers[0]=User;
+      listUsers[getPostion(listUsers)]=User;
     }
 
     public static String getUsers( String usersList[]){
@@ -20,7 +26,8 @@ public class House{
     public static void showHouse(House h ,String userslist[] ){
         System.out.println("The name of house is : "+h.house);
         System.out.println("The name of  owner house is  :"+h.ownerHouse);
-        System.out.println("The list of habitants is   :"+getUsers(userslist));
+        System.out.println("The list of habitants is   :");
+        System.out.println(userslist[0]);
     }
 
 
